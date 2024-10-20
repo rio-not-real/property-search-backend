@@ -1,0 +1,24 @@
+[project]
+name = "property-search-backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.115.0",
+    "pydantic>=2.9.2",
+    "pydantic-settings>=2.5.2",
+    "google-cloud-bigquery>=3.26.0",
+    "orjson>=3.10.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.11.2",
+    "pytest>=8.3.3",
+    "ruff>=0.6.8",
+]
+
+[tool.mypy]
+strict = true
+exclude = ["venv", ".venv"]

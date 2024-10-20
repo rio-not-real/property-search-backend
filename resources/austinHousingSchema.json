@@ -1,0 +1,237 @@
+[
+  {
+    "mode": "REQUIRED",
+    "name": "zpid",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "city",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "streetAddress",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "zipcode",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "content",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "latitude",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "longitude",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "propertyTaxRate",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "garageSpaces",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hasAssociation",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hasCooling",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hasGarage",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hasHeating",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hasSpa",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hasView",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "homeType",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "parkingSpaces",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "yearBuilt",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "latestPrice",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numPriceChanges",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "latest_saledate",
+    "type": "DATE"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "latest_salemonth",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "latest_saleyear",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "latestPriceSource",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfPhotos",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfAccessibilityFeatures",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfAppliances",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfParkingFeatures",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfPatioAndPorchFeatures",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfSecurityFeatures",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfWaterfrontFeatures",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfWindowFeatures",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfCommunityFeatures",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "lotSizeSqFt",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "livingAreaSqFt",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfPrimarySchools",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfElementarySchools",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfMiddleSchools",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfHighSchools",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "avgSchoolDistance",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "avgSchoolRating",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "avgSchoolSize",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "MedianStudentsPerTeacher",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfBathrooms",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfBedrooms",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "numOfStories",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "homeImage",
+    "type": "STRING"
+  }
+]
