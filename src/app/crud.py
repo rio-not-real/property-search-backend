@@ -19,7 +19,6 @@ def read_property_by_zpid(
     stmt: str = (
         f"SELECT * FROM {dataset_name}.{table_name} WHERE zpid = {zpid} LIMIT 1;"
     )
-    logger.debug("Executing statement: %s", stmt)
     row: table.RowIterator = bq_client.query_and_wait(stmt)
     try:
         return dict(next(row))
@@ -41,7 +40,6 @@ SELECT EXISTS(
     SELECT zpid FROM {dataset_name}.{table_name} WHERE zpid = {zpid}
 ) AS property_exists;
 """
-    logger.debug("Executing statement: %s", stmt)
     row: table.RowIterator = bq_client.query_and_wait(stmt)
     property_exists: bool = next(row).property_exists
     return property_exists
@@ -73,8 +71,6 @@ FROM VECTOR_SEARCH(
     , distance_type => '{distance_type}'
 )
 """
-    print(stmt)
-    logger.debug("Executing statement: %s", stmt)
     rows: table.RowIterator = bq_client.query_and_wait(stmt)
     return [dict(row) for row in rows]
 
@@ -142,6 +138,5 @@ SELECT * FROM (
 )
 LIMIT {top_k};
 """
-    logger.debug("Executing statement: %s", stmt)
     properties: table.RowIterator = bq_client.query_and_wait(stmt)
     return [dict(row) for row in properties]
