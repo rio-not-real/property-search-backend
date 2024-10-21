@@ -10,6 +10,8 @@ dependencies = [
     "pydantic-settings>=2.5.2",
     "google-cloud-bigquery>=3.26.0",
     "orjson>=3.10.7",
+    "uvloop>=0.21.0",
+    "httptools>=0.6.4",
 ]
 
 [project.optional-dependencies]

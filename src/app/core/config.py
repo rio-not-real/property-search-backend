@@ -1,6 +1,12 @@
 from pathlib import Path
+from typing import Annotated
 
+from pydantic import AnyUrl, BeforeValidator, computed_field
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+def parse_cors(origins: str) -> list[str]:
+    return [origin.strip() for origin in origins.strip("[]{}()").split(",")]
 
 
 class Settings(BaseSettings):
@@ -11,6 +17,18 @@ class Settings(BaseSettings):
     )
     PROJECT_NAME: str = "Property Search"
     API_V1_STR: str = "/api/v1"
+
+    FRONTEND_HOST: str = "http://localhost:8501"
+    BACKEND_CORS_ORIGINS: Annotated[
+        list[AnyUrl] | str, BeforeValidator(parse_cors)
+    ] = []
+
+    @computed_field  # type: ignore[prop-decorator]
+    @property
+    def all_cors_origins(self) -> list[str]:
+        return [str(origin).rstrip("/") for origin in self.BACKEND_CORS_ORIGINS] + [
+            self.FRONTEND_HOST
+        ]
 
     GOOGLE_CLOUD_PROJECT: str
     GOOGLE_CLOUD_LOCATION: str = "US"

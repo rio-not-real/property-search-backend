@@ -1,4 +1,4 @@
-from typing import Annotated, Generator
+from typing import Annotated, AsyncGenerator
 
 from fastapi import Depends
 from google.cloud.bigquery import Client
@@ -6,7 +6,7 @@ from google.cloud.bigquery import Client
 from app.core.db import get_bq_client
 
 
-def bq_client() -> Generator[Client, None, None]:
+async def bq_client() -> AsyncGenerator[Client, None]:
     with get_bq_client() as client:
         yield client
 

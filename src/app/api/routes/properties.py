@@ -17,7 +17,7 @@ router = APIRouter()
 
 
 @router.get("/{property_id}", response_class=ORJSONResponse)
-def get_property_by_id(bq_client: ClientDep, property_id: int) -> Any:
+async def get_property_by_id(bq_client: ClientDep, property_id: int) -> Any:
     """Gets a property by its ID."""
 
     try:
@@ -36,7 +36,9 @@ def get_property_by_id(bq_client: ClientDep, property_id: int) -> Any:
 
 
 @router.get("/", response_class=ORJSONResponse)
-def get_similar_properties_by_id(bq_client: ClientDep, zpid: int, top_k: int) -> Any:
+async def get_similar_properties_by_id(
+    bq_client: ClientDep, zpid: int, top_k: int
+) -> Any:
     """Given a property ID, returns top k similar properties."""
 
     if top_k > MAX_TOP_K:
